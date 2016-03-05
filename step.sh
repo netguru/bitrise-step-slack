@@ -1,6 +1,6 @@
 #!/bin/bash
 
-this_dir = $( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
+this_dir=$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
 
 bundle install --gemfile $this_dir/Gemfile
 bundle exec $this_dir/bin/slack-step
