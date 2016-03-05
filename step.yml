@@ -18,9 +18,9 @@ is_skippable: true
 
 # Dependencies
 
-dependencies:
-  - manager: gem
-    name: bundler
+deps:
+  gem:
+    - name: bundler
 
 # Inputs
 
