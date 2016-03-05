@@ -16,6 +16,12 @@ is_requires_admin_user: false
 is_always_run: true
 is_skippable: true
 
+# Dependencies
+
+dependencies:
+  - manager: gem
+    name: bundler
+
 # Inputs
 
 inputs:
@@ -31,31 +37,3 @@ inputs:
       summary: Slack channel, group or username.
       is_expand: true
       is_required: false
-  - username: Bitrise
-    opts:
-      title: Bot username
-      summary: Bot username as seen in Slack.
-      is_expand: true
-      is_required: true
-  - avatar_success:
-    opts:
-      title: Success avatar
-      summary: Avatar in case of success. You may use emoji as well.
-      is_expand: true
-      is_required: true
-  - avatar_failure:
-    opts:
-      title: Failure avatar
-      summary: Avatar in case of failure. You may use emoji as well.
-      is_expand: true
-      is_required: true
-
-# Outputs
-
-outputs:
-  - SLACK_WEBHOOK_STATUS:
-    opts:
-      title: Slack webhook status
-      summary: The webhook delivery status.
-      is_expand: false
-      value_options: [success, failure]
