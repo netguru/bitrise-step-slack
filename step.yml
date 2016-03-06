@@ -16,12 +16,6 @@ is_requires_admin_user: false
 is_always_run: true
 is_skippable: true
 
-# Dependencies
-
-deps:
-  gem:
-    - name: bundler
-
 # Inputs
 
 inputs:
