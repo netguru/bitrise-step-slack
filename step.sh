@@ -1,10 +1,10 @@
 #!/bin/bash
 
-this_dir=$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
+step_dir=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 
 gem install bundler --quiet --no-rdoc --no-ri
 
-bundle install --quiet --gemfile $this_dir/Gemfile
-bundle exec $this_dir/bin/slack-step
+(cd $step_dir && bundle install --quiet)
+(cd $step_dir && bundle exec ./bin/slack-step)
 
 exit $?
