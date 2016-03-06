@@ -33,7 +33,7 @@ module SlackStep
     end
 
     def git_author
-      @nenv.git_clone_commit_author
+      @nenv.git_clone_commit_commiter_name
     end
 
     def git_branch
