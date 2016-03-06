@@ -21,7 +21,7 @@ module SlackStep
     end
 
     def build_successful?
-      @nenv.bitrise_build_status?
+      !@nenv.bitrise_build_status?
     end
 
     def git_commit
@@ -73,7 +73,7 @@ module SlackStep
     end
 
     def xcode_scheme
-      @nenv.xcode_scheme
+      @nenv.bitrise_scheme
     end
 
   end
