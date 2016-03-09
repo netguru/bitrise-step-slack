@@ -25,7 +25,7 @@ inputs:
       summary: The Slack webhook URL to post the message to.
       is_expand: true
       is_required: true
-  - channel:
+  - channel: $SLACK_CHANNEL
     opts:
       title: Channel
       summary: Slack channel, group or username.
