@@ -14,8 +14,8 @@ steps:
   - git::git@github.com:netguru/bitrise-step-slack.git:
       title: slack
       inputs:
-        - webhook_url: https://netguru.slack.com/...
-        - channel: "#sandbox"
+        - webhook_url: https://team.slack.com/...
+        - channel: "#general"
 ```
 
 ### bitrise.io
@@ -28,19 +28,27 @@ Also, as long as this step is private, and until Bitrise.io introduces support f
 
 ### Requirements
 
-This step requires the following dev dependencies:
+This step requires the following pre-installed dependencies:
 
-- [Bitrise](https://bitrise.io) >= 1.2
 - [Ruby](https://rvm.io) >= 2.2
-- [Bundler](http://bundler.io) >= 1.10
+
+### Configuration
+
+The step reads its configuration from environment. Since it uses `dotenv`, you can configure your step by duplicating `.env.default` file into a `.env` file and edit the values in there.
+
+Keep in mind that `.env` file is ignored by Git, so you can put sensitive information (such as webhook URL) in there. It will not be committed.
+
+### Running
+
+Run your step by executing `step.sh` file:
+
+```bash
+$ ./step.sh
+```
 
 ### Dependencies
 
-Install required dependencies using Bundler:
-
-```bash
-$ bundle install
-```
+The dependencies are installed automatically when you run `step.sh`.
 
 ### Committing
 
