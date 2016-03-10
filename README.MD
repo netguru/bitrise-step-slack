@@ -11,7 +11,7 @@ To use this step in your Bitrise workflow, prefix the step name with a Git URL o
 
 ```yml
 steps:
-  - git::git@github.com:netguru/bitrise-step-slack.git:
+  - git::git@github.com:netguru/bitrise-step-slack.git@master:
       title: slack
       inputs:
         - webhook_url: https://team.slack.com/...
