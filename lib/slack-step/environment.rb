@@ -49,7 +49,9 @@ module SlackStep
     end
 
     def jira_task
-      git_branch.split("/").last.split("-").each_cons(2).to_a.each do |comps|
+      comp_groups = git_branch.split("/").last.split("-").each_cons(2).to_a
+      return nil if comp_groups.empty?
+      comp_groups.each do |comps|
         if comps[0].downcase == jira_project_key.downcase && comps[1].is_numeric?
           return "#{comps[0]}-#{comps[1]}".upcase
         end
