@@ -1,0 +1,19 @@
+#
+#  .gitignore
+#
+#  Copyright (c) 2016 Netguru Sp. z o.o. All rights reserved.
+#
+
+# OS X
+.DS_Store
+.Trashes
+.localized
+
+# Bitrise
+.bitrise*
+
+# Environment
+.env
+
+# Bundler
+.bundle
