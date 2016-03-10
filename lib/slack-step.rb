@@ -8,7 +8,6 @@ require "dotenv"
 require "nenv"
 require "slack-notifier"
 
-require_relative "ext/hash"
 require_relative "ext/string"
 
 require_relative "slack-step/application"

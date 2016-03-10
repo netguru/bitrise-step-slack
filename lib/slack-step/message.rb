@@ -13,11 +13,11 @@ module SlackStep
     end
 
     def fallback
-      "Build #{build_verb}: ##{@env.build_number} (#{@env.git_commit} by #{@env.git_author} on #{@env.git_branch})"
+      "Build #{build_verb}: ##{env.build_number} (#{env.git_commit} by #{env.git_author} on #{env.git_branch})"
     end
 
     def title
-      "*Build #{build_verb}: [##{@env.build_number}](#{@env.build_url}) (#{@env.git_commit} by #{@env.git_author} on #{@env.git_branch})*"
+      "*Build #{build_verb}: [##{env.build_number}](#{env.build_url}) (#{env.git_commit} by #{env.git_author} on #{env.git_branch})*"
     end
 
     def border_color
@@ -34,22 +34,24 @@ module SlackStep
 
     private
 
+    attr_reader :env
+
     def build_verb
-      @env.build_successful? ? "succeeded" : "failed"
+      env.build_successful? ? "succeeded" : "failed"
     end
 
     def field_commit
       {
         title: "Commit",
-        value: @env.git_message,
+        value: env.git_message,
         short: false,
       }
     end
 
     def field_jira
-      @env.jira_task.nil? ? nil : {
+      env.jira_task.nil? ? nil : {
         title: "Task",
-        value: "[#{@env.jira_task}](https://#{@env.jira_domain}.atlassian.net/browse/#{@env.jira_task})",
+        value: "[#{env.jira_task}](https://#{env.jira_domain}.atlassian.net/browse/#{env.jira_task})",
         short: true,
       }
     end
@@ -57,7 +59,7 @@ module SlackStep
     def field_scheme
       {
         title: "Scheme",
-        value: @env.xcode_scheme,
+        value: env.xcode_scheme,
         short: true,
       }
     end

@@ -7,6 +7,6 @@ Dotenv.load(".env", ".env.default")
 env = SlackStep::Environment.new(Nenv.instance)
 app = SlackStep::Application.new(env)
 
-success = app.run()
+success = app.run
 
 exit success ? 0 : 1

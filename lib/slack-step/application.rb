@@ -12,18 +12,20 @@ module SlackStep
       @env = env
     end
 
-    def run()
+    def run
       client.send(message)
     end
 
     private
 
+    attr_reader :env
+
     def client
-      @client ||= Client.new(@env)
+      @client ||= Client.new(env)
     end
 
     def message
-      @message ||= Message.new(@env)
+      @message ||= Message.new(env)
     end
 
   end
