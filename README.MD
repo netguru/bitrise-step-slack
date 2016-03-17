@@ -36,6 +36,12 @@ steps:
 
 As bitrise.io doesn't allow to add a custom step using the UI Workflow Editor, use the YAML editor to manually add the step to the workflow. Follow the guide above.
 
+### Environment variables
+
+The step supports the following custom environment variables, which may be set in `bitrise.yml` or in Bitrise.io UI editor:
+
+- `JIRA_DOMAIN`: The domain of your JIRA installation (found in the URL, e.g. `https://JIRA_DOMAIN.attlasian.net`)
+- `JIRA_PROJECT_KEY`: The key of your JIRA project, used to scan branch names for task IDs.
 
 ### Bot user icon
 
