@@ -6,10 +6,10 @@ A next-gen Slack webhook step for Bitrise.
 
 ## Features
 
-- **All commit information included:** the step includes all information about the triggering commit – hash, author, branch and, of course, message.
-- **Attachment-powered:** Our step takes advantage of rich message attachments and formats the message accordingly to build status.
+- **All commit information included:** Messages include commit hash, author, branch and, of course, message.
+- **Attachment-powered:** Take advantage of rich message attachments and formats the message according to build status.
 - **JIRA task extraction:** The step scans your branch name for JIRA task ID and includes it in the message.
-- **Xcode scheme extraction:** The step will tell you which scheme was used to build your project.
+- **Xcode scheme extraction:** Messages include information about Xcode scheme used to build your project.
 
 ### Upcoming features
 
@@ -22,7 +22,6 @@ A next-gen Slack webhook step for Bitrise.
 ### bitrise.yml
 
 To use this step in your Bitrise workflow, prefix the step name with a Git URL of this repository:
-
 
 ```yml
 steps:
