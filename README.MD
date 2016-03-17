@@ -4,6 +4,19 @@ A next-gen Slack webhook step for Bitrise.
 
 ![](resources/screenshot.png)
 
+## Features
+
+- **All commit information included:** the step includes all information about the triggering commit – hash, author, branch and, of course, message.
+- **Attachment-powered:** Our step takes advantage of rich message attachments and formats the message accordingly to build status.
+- **JIRA task extraction:** The step scans your branch name for JIRA task ID and includes it in the message.
+- **Xcode scheme extraction:** The step will tell you which scheme was used to build your project.
+
+### Upcoming features
+
+- [HockeyApp integration](https://github.com/netguru/bitrise-step-slack/issues/4)
+- [Custom bot user icon](https://github.com/netguru/bitrise-step-slack/issues/5)
+- [Test results and coverage](https://github.com/netguru/bitrise-step-slack/issues/6)
+
 ## Usage
 
 ### bitrise.yml
