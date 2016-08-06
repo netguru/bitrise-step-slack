@@ -56,6 +56,7 @@ module SlackStep
           return "#{comps[0]}-#{comps[1]}".upcase
         end
       end
+      return nil
     end
 
     def slack_webhook_url
